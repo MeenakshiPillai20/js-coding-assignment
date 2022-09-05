@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Arrays Questions</h1>
+
+    <h3>Qu 1. Write a program that takes an array as input from the user and find out the product of the elements?</h3>
+<pre>
+    const Find_Prod = (arr, n) => 
+    {
+       let product=1;
+       for (let i=0;i< n;i++){
+         product*=arr[i];
+       }
+       return product;
+    
+    };
+</pre>
+    <h3>Qu 2. Write a program which takes an array as input from the user and find out the sum of the array elements?</h3>
+<pre>
+    const Find_Sum = (arr, n) => 
+    {
+       let sum=0;
+       for (let i=0;i< n;i++){
+         sum+=arr[i];
+       }
+        return sum;
+    };
+</pre>
+    <h3>Qu 3. Write a program to find Count Occurrences?</h3>
+ <pre>
+    const findCount = (n, k, arr) => 
+    {
+        let count=0;
+        for (let i=0;i< n;i++)
+        {
+          if (arr[i]==k){
+            count++;
+          }
+        }
+        return count;
+    };
+</pre>
+
+    <h3>Qu 4. Write a program to print sum of all even number and odd number in an array?</h3>
+<pre>
+    const findEvenOdd = (n, arr) => 
+    {
+        let sum=[];
+        let even=0,odd=0;
+        for (let i=0;i< n;i++){
+          if (arr[i]%2===0)
+            even+=arr[i];
+          else
+            odd+=arr[i];
+          
+        }
+        sum[0]=even;
+        sum[1]=odd;
+        return sum;
+    };
+</pre>
+
+    <h3>Qu 5. Write a program to Find whether the number is present or not?</h3>
+<pre>
+    const Find_Num = (arr,n,m) => 
+    {
+      let count=0;
+    for(let i=0;i< n;i++){
+      if (arr[i]==m)
+        count++;
+    }
+    if(count!=0)
+      return "YES";
+    else
+      return "NO";
+      
+    };
+</pre>
+    
+    <h3>Qu 6. Write a program to find age more than or equal to 18 in an array?</h3>
+<pre>
+    const highAge = (n, arr) => 
+    {
+        let k=0;
+        let above=[];
+        for(let i=0;i< n;i++){
+          if (arr[i]>=18){
+            above[k]=arr[i];
+            k++;
+          }
+        }
+        return above;
+    };
+</pre>
+
+    <h3>Qu 7. Write a program to increment all array elements by 1 and then print whole array?</h3>
+<pre>
+    const Inc_Arr = (arr,n) => 
+    {
+      for (let i=0;i< n;i++){
+        arr[i]+=1;
+        console.log(arr[i]);
+      }
+    };
+</pre>
+ 
+    <h3>Qu 8. Write a program to fint whole class is pass in maths or not?</h3>
+<pre>
+    const isAllPass = (n, arr) => 
+    {
+        let flag=0;
+        for(let i=0;i< n;i++){
+          if (arr[i]< 32){
+            flag+=1;
+          }
+        }
+        if (flag == 0)
+            return "YES";
+        else
+            return "NO";
+    };
+</pre>
+<h3>Qu 9. Write a program which will find Unique Color Shirt?</h3>
+<pre>
+    function Unique_Shirts (arr,n){
+        let count=0,ans=0;
+      for (let i=0;i< n;i++){
+        for (let j=0;j< n;j++){
+          if(arr[i]==arr[j]){
+            count+=1;
+          }
+        }
+      if (count==1){
+        ans+=1;
+      }
+      count=0;
+      }
+       return ans;
+      }
+      
+</pre>
+
+<h3>Qu 10. Write a program to fin min and max value in an array?</h3>
+<pre>
+    function arrayMin(arr) {
+        let val=arr[0];
+        for (let i=0;i< arr.length;i++){
+          if(val>arr[i]){
+            val = arr[i];
+          }
+        }
+        return val;
+      }
+      
+      function arrayMax(arr) {
+        let val=arr[0];
+        for (let i=0;i< arr.length;i++){
+          if(val< arr[i]){
+            val = arr[i];
+          }
+        }
+        return val;
+      }       
+</pre>
+<h3>Qu 11. Write a program for Birthday Game?</h3>
+<pre>
+    function Birthday_Game(arr,D ,M) {
+        let count=0,sum=0;
+       for (let i=0;i<= (arr.length - M);i++){
+         for (let j=i;j<= (i+M-1);j++){
+           sum+=arr[j];
+         }
+         if(sum==D){
+           count++;
+         }
+         sum=0;
+       }
+       return count;
+      
+    }
+</pre>
+</body>
+</html>
